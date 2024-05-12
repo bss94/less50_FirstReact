@@ -10,20 +10,27 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="style.css">
-
-
 </head>
 <body>
 <div id="app"></div>
 
 <script type="text/babel">
-
     const Header = () => {
         return (
             <div className="header">
-                <img className="logo" src="https://www.anilibria.tv/img/logo_new1.png" alt=""/>
-                <form><input type="text" placeholder="Search"></input><button type="submit">search</button></form>
-                <a className="login" href="#"><img className="log_logo" src="https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-Images.png" alt=""/>  Login</a>
+                <a href="#">
+                    <img className="logo"
+                         src="https://th.bing.com/th/id/R.5d20f9c3ff78618a35feb1f696cb5d38?rik=qSh7OW7e4%2bKaXw&pid=ImgRaw&r=0"
+                         alt=""/>
+                </a>
+
+                <form><input type="text" placeholder="Search"></input>
+                    <button type="submit"><img src="https://icon-library.com/images/look-up-icon/look-up-icon-17.jpg"
+                                               alt=''/></button>
+                </form>
+                <a className="login" href="#"><img className="log_logo"
+                                                   src="https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-Images.png"
+                                                   alt=""/> Login</a>
             </div>
         );
     };
@@ -37,16 +44,54 @@
         );
     };
     const Sidebar = () => {
-        const link = ['Main','About us','Contact','Our Team','Our release','Favorites'];
+        const link = ['Main', 'About us', 'Contact', 'Our Team', 'Our release', 'Favorites'];
         return (
             <div className="sidebar">
                 <ul className="list">
-                    {link.map((el,index)=>{
-                        return(
+                    {link.map((el, index) => {
+                        return (
                             <li key={index} className="list-item"><a className="item-link" href="#">{el}</a></li>
                         );
                     })}
                 </ul>
+            </div>
+        );
+    };
+    const Games = (props) => {
+        return (
+            <div className="item" key={props.id}>
+                <img src={props.img} alt=""/>
+                <h1>{props.name}</h1>
+                <p>{props.date}</p>
+            </div>
+        );
+    };
+    const Content = () => {
+        return (
+            <div className="content">
+                <h3 className="title">Welcome to Game.com</h3>
+                <p className="text">Our team get to you best experience on gaming!</p>
+                <p className="text medium">Now We get to You list of the populars and interesting online games for this
+                    times</p>
+                <p className="text long">You must try to play this games if you wanna says - I played in Giants of
+                    online gaming.<br/>
+                    EvE Online is a giantess space sandbox, you can died anywhere if you undock your ship to space,try
+                    stay alive, move to the space wars,
+                    buy better ships and try kill any player.<br/>
+                    Black Dessert is open world MMORPG!You need money? - grind it, You need experience? - grind it, you
+                    need best equipment? -
+                    just grind it! this is the Big worlds and this is full on grind!<br/>
+                    World of Tanks most popular session MMO of Tanks theme!You interesting tanks? - just try it!
+                </p>
+                <div className="preview">
+                    <Games name="EvE Online" img='https://i.playground.ru/e/euCkdQUrJDyxCghQX3dF1Q.jpeg?208x288'
+                           date='2003'/>
+                    <Games name="Black Dessert" img='https://i.playground.ru/e/S6A4V9nPg3vUOYLsS4nBJg.jpeg?208x288'
+                           date='2015'/>
+                    <Games name="World of Tanks" img='https://i.playground.ru/e/BZMIXvaB6wMCi_qLVQy0Iw.jpeg?208x288'
+                           date='2022'/>
+                </div>
+
             </div>
         );
     };
@@ -56,15 +101,15 @@
         <>
             <div className="container">
                 <Header/>
-                <Sidebar/>
+                <div className="page-body">
+                    <Sidebar/>
+                    <Content/>
+                </div>
                 <Footer/>
             </div>
 
         </>
     )
-
-
-
     ReactDOM.render(header, document.getElementById('app'));
 </script>
 </body>
