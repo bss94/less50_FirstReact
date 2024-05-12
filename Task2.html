@@ -18,7 +18,31 @@
 
 <script type="text/babel">
 
-    ReactDOM.render(list, document.getElementById('app'));
+    const Header = () => {
+        return (
+            <div className="header">
+                <img className="logo" src="https://www.anilibria.tv/img/logo_new1.png" alt=""/>
+                <form><input type="text" placeholder="Search"></input><button type="submit">search</button></form>
+                <a className="login" href="#"><img className="log_logo" src="https://www.pngall.com/wp-content/uploads/13/Anime-Logo-PNG-Images.png" alt=""/>  Login</a>
+            </div>
+        );
+    };
+
+
+
+    const header = (
+        <>
+            <div className="container">
+                <Header/>
+
+            </div>
+
+        </>
+    )
+
+
+
+    ReactDOM.render(header, document.getElementById('app'));
 </script>
 </body>
 </html>

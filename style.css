@@ -16,3 +16,26 @@
 .item h1{
    font-size: 16px;
 }
+/********** for task 2 *************/
+body{
+    background-color: #424242;
+}
+.container{
+    margin: auto;
+    width: 80%;
+    background-color: #9f8c8c;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.log_logo{
+    width: 40px;
+}
+.login{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
