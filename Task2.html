@@ -36,12 +36,27 @@
             </div>
         );
     };
+    const Sidebar = () => {
+        const link = ['Main','About us','Contact','Our Team','Our release','Favorites'];
+        return (
+            <div className="sidebar">
+                <ul className="list">
+                    {link.map((el,index)=>{
+                        return(
+                            <li key={index} className="list-item"><a className="item-link" href="#">{el}</a></li>
+                        );
+                    })}
+                </ul>
+            </div>
+        );
+    };
 
 
     const header = (
         <>
             <div className="container">
                 <Header/>
+                <Sidebar/>
                 <Footer/>
             </div>
 
