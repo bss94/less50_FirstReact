@@ -24,11 +24,16 @@ body{
     margin: auto;
     width: 80%;
     background-color: #9f8c8c;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: #7c7474 5px 5px 2px;
 }
 .header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding: 10px 0;
+    border-bottom: #424242 solid 1px;
 }
 .log_logo{
     width: 40px;
@@ -38,4 +43,10 @@ body{
     align-items: center;
     text-decoration: none;
     color: black;
+}
+.footer{
+    text-shadow: 1px 1px 1px #2a2a2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
